@@ -1,0 +1,29 @@
+.wheel{
+    animation: wheel 2s 1 linear;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+.wheel-front{
+animation: wheel-front 2s 1 linear;
+transform-origin: center;
+transform-box: fill-box;
+}
+
+@keyframes wheel{
+    from{
+        transform:rotateZ(360deg);
+    }
+    to{
+        transform:rotateZ(0deg);
+    }
+}
+
+@keyframes wheel-front{
+    from{
+        transform:rotateZ(0deg);
+    }
+    to{
+        transform:rotateZ(360deg);
+    }
+}

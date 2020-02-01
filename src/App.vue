@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container-fluid">
+      <div class="scene">
+        <div class="row justify-content-center align-content-end h-100">
+            <div class="col-md-6 ">
+                <div class="site-box">
+                </div>
+            </div>
+        </div>
+      <truck/>
+      <helicopter/>
+      <crane/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Crane from './components/Crane.vue'
+import Helicopter from './components/Helicopter.vue'
+import Truck from './components/Truck.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Crane,
+    Helicopter,
+    Truck
   }
 }
 </script>
+<style lang="scss">
+@import "./assets/wheel";
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.container-fluid {
+  padding: 0 !important;
+}
+.scene{
+  height: 100vh;
+  overflow: hidden;
+  position:relative;
+}
+
+.site-box{
+  width:646px;
+  height:657px; 
+  background: #000000;
 }
 </style>
